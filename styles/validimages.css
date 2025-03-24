@@ -26,15 +26,24 @@
 }
 
 .valid-button {
+   background-color: black;
+   transition: ease-in 0.245s;
    border-radius: 15px;
    cursor: pointer;
    width: inherit;
    aspect-ratio: 1;
    border: none;
+   transition: all 0.245s;
 }
 
 .valid-button > img {
+   transition: ease-out 0.245s;
    width: 100%;
    aspect-ratio: 1;
    border-radius: 15px;
+}
+
+.valid-button > img:hover {
+   transition: ease-in 0.245s;
+   opacity: 0.425;
 }
