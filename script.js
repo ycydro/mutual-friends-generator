@@ -35,12 +35,14 @@ function imageFilePath() {
 
 function renderHTML() {
    const containerElement = document.querySelector('.container');
-   const cardsTotal = profileCards.length;
+
+   // reverse the current array to generate new cards first
+   const reversedProfileCards = profileCards.slice().reverse();
 
    let cardContainerHTML = ``;
    
-   for (let i = 0; i < cardsTotal; i++) {
-      const cardObject = profileCards[i];
+   for (let i = 0; i < reversedProfileCards.length; i++) {
+      const cardObject = reversedProfileCards[i];
       const {image, name} = cardObject;
       const moots = Math.floor(randomNumber(1, 100));
 
