@@ -16,22 +16,37 @@ function renderValidImages() {
 
    let containerHTML = ``;
 
-   for (let i = 0; i < validImages.length; i++) {
-      const validImagesObj = validImages[i];
+   validImages.forEach(function(validImagesObj, i) {
       const {filepath, name} = validImagesObj;
       containerHTML += 
       `
          <div class="valid-box">
-            <button class="valid-button" onclick="addValue('${name}')">
+            <button class="valid-button" onclick="addValue('${filepath}', '${name}')">
                <img class="img-icons" src="${filepath}" alt="valid image">
             </button>
             <p>${name}</p>
          </div>
       `
-   }
+   })
+
+   // for (let i = 0; i < validImages.length; i++) {
+   //    const validImagesObj = validImages[i];
+   //    const {filepath, name} = validImagesObj;
+   //    containerHTML += 
+   //    `
+   //       <div class="valid-box">
+   //          <button class="valid-button" onclick="addValue('${name}')">
+   //             <img class="img-icons" src="${filepath}" alt="valid image">
+   //          </button>
+   //          <p>${name}</p>
+   //       </div>
+   //    `
+   // }
+
    validImagesContainer.innerHTML = containerHTML;
 }
 
-function addValue(name) {
+function addValue(filepath, name) {
+   addProfileCard(filepath);
    document.getElementById('image').value = name;
 }

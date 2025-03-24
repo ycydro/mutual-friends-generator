@@ -2,10 +2,10 @@ let profileCards = [{image: `./images/cat1.jpg`, name: `Siopao`}];
 
 renderHTML();
 
-function addProfileCard() {
+function addProfileCard(image = '', name = '') {
    const nameInput = document.getElementById('profile-name');
-   const image = imageFilePath();
-   let name = nameInput.value;
+   image = image || imageFilePath();
+   name = name || nameInput.value;
 
    if (!name) {
       const randomNames = [`Lucky`, `LeBron`, `LeCat`, `GOAT`, `Buricat`, `Siopao`, `Loonie`, `Kai Sotto`, `Hev Abnoy`]
@@ -40,9 +40,8 @@ function renderHTML() {
    const reversedProfileCards = profileCards.slice().reverse();
 
    let cardContainerHTML = ``;
-   
-   for (let i = 0; i < reversedProfileCards.length; i++) {
-      const cardObject = reversedProfileCards[i];
+
+   reversedProfileCards.forEach(function(cardObject, idx) {
       const {image, name} = cardObject;
       const moots = Math.floor(randomNumber(1, 100));
 
@@ -65,8 +64,35 @@ function renderHTML() {
          </div>
       </div>
       `
-      containerElement.innerHTML = cardContainerHTML;
-   }
+   })
+   
+   // for (let i = 0; i < reversedProfileCards.length; i++) {
+   //    const cardObject = reversedProfileCards[i];
+   //    const {image, name} = cardObject;
+   //    const moots = Math.floor(randomNumber(1, 100));
+
+   //    cardContainerHTML += 
+   //    `
+   //    <div class="profile-containers">
+   //       <div class="images">
+   //       <img src="${image}" alt="" />
+   //       </div>
+   //       <div class="profile-info">
+   //          <p class="name">
+   //             ${name}
+   //          </p>
+   //          <p class="mutual-friends">
+   //             ${moots} mutual friends
+   //          </p>
+   //       </div>
+   //       <div class="button">
+   //          <button class="add-friend">Add Friend</button>
+   //       </div>
+   //    </div>
+   //    `
+   // }
+   
+   containerElement.innerHTML = cardContainerHTML;
 }
 
 function randomNumber(min, max) {
