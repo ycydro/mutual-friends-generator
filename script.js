@@ -1,6 +1,6 @@
 let profileCards = [{image: `./images/cat1.jpg`, name: `Siopao`}];
 
-render();
+renderHTML();
 
 function addProfileCard() {
    const nameInput = document.getElementById('profile-name');
@@ -15,7 +15,7 @@ function addProfileCard() {
    }
 
    profileCards.push( {image, name} ) 
-   render();
+   renderHTML();
 }
 
 function imageFilePath() {
@@ -33,7 +33,7 @@ function imageFilePath() {
    return `./images/${image}`;
 }
 
-function render() {
+function renderHTML() {
    const containerElement = document.querySelector('.container');
    const cardsTotal = profileCards.length;
 
@@ -63,8 +63,6 @@ function render() {
          </div>
       </div>
       `
-
-
       containerElement.innerHTML = cardContainerHTML;
    }
 }
