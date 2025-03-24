@@ -25,7 +25,15 @@
    max-width: 75px;
 }
 
-.valid-box > img {
+.valid-button {
+   border-radius: 15px;
+   cursor: pointer;
+   width: inherit;
+   aspect-ratio: 1;
+   border: none;
+}
+
+.valid-button > img {
    width: 100%;
    aspect-ratio: 1;
    border-radius: 15px;

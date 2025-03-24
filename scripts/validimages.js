@@ -21,11 +21,17 @@ function renderValidImages() {
       const {filepath, name} = validImagesObj;
       containerHTML += 
       `
-      <div class="valid-box">
-         <img src="${filepath}" alt="valid image">
-         <p>${name}</p>
-      </div>
+         <div class="valid-box">
+            <button class="valid-button" onclick="addValue('${name}')">
+               <img class="img-icons" src="${filepath}" alt="valid image">
+            </button>
+            <p>${name}</p>
+         </div>
       `
    }
    validImagesContainer.innerHTML = containerHTML;
+}
+
+function addValue(name) {
+   document.getElementById('image').value = name;
 }
