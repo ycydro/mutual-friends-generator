@@ -1,0 +1,32 @@
+.valid-images{
+   width: 50%;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: auto;
+}
+
+.valid-imgs-container {
+   margin: 1rem 1rem 1.5rem 1rem;
+   width: 100%;
+   height: auto;
+   display: grid;
+   place-items: center;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 1rem;
+}
+
+.valid-box {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2px;
+   max-width: 75px;
+}
+
+.valid-box > img {
+   width: 100%;
+   aspect-ratio: 1;
+   border-radius: 15px;
+}

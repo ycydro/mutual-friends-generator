@@ -4,25 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mutual Friends Generator</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/validimages.css" />
     <link rel="shortcut icon" href="./icon/icon.png" type="image/x-icon">
     
   </head>
   <body>
     <h1>Mutual Friends Generator</h1>
-    <header>
+    <section class="valid-images">
+      <p>Usable File Names:</p>
+      <div class="valid-imgs-container"></div>
+    </section>
+
+    <section class="generator-section">
         <div class="generator">
+          <div class="image-input">
             <p>Image: </p>
             <input type="text" placeholder="File Name" id="image">
+          </div>
+
+          <div class="profile-input">
             <p>Profile Name: </p>
             <input type="text" placeholder="Name" id="profile-name">
-            <button class="add-friend-generator" onclick="addProfileCard()" id="">Add Card</button>
+          </div>
+
+            <button class="add-friend-generator" onclick="addProfileCard()" id="">Generate</button>
+
         </div>
-    </header>
+    </section>
 
     <section>
         <div class="container"></div>
     </section>    
-    <script src="script.js"></script>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/validimages.js"></script>
   </body>
 </html>
