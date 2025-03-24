@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #18191a;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1.3rem 4px 0.8rem 4px;
+}
+
+
+#mutual-friends-counter  {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+section {
+    width: 80%;
+}
+
+.counter {
+    right: 50px;
+}
+
+.generator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: auto;
+    height: 50px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-height: 50vh;
+    max-height: auto;
+}
+
+.profile-containers {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    max-width: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0 0 10px 0;
+    background-color: #3a3b3c;
+    transition: all 0.545s;
+}
+
+.profile-containers:hover{
+     /* img {
+        width: 220px;
+        aspect-ratio: 1;
+    } */
+    max-width: 220px;
+    transition: all 0.545s;
+     .add-friend {
+        padding: 10px 4rem;
+     }
+}
+
+.images > img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    aspect-ratio: 1;
+    transition: all 0.545s;
+} 
+
+.profile-info {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0 0 10px;
+}
+
+.name {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.mutual-friends {
+    color: #b0b3b8;
+    font-size: 13px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 5px 0;
+}
+
+.add-friend, .add-friend-generator {
+    color: white;
+    background-color: #1877f2;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px 3rem;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.add-friend-generator {
+    padding: 5px 1rem;
+}
+
+.add-friend-generator:hover, .add-friend:hover {
+    background-color: white;
+    color: #3a3b3c;
+}
+
+@media (max-width: 700px) {
+    .container {
+        height: 100%;
+        flex-direction: column;
+    } 
+
+    .generator {
+        font-size: 0.8rem;
+        gap: 5px;
+        margin: 5px 10px;
+    }
+
+    .generator > input[type="text"] {
+        width: 25%;
+    }
+
+    .add-friend-generator {
+        font-size: 12px;
+        padding: 2px 5px;
+    }
+}
+
+
+
+
